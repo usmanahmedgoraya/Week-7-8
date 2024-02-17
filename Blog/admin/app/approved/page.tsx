@@ -4,7 +4,7 @@ import Empty from '@/Components/Empty'
 import useBlogStore from '@/zustand/useBlogStore'
 import React, { useEffect } from 'react'
 
-const page = () => {
+const Page = () => {
   const { Approved, getAllBlog } = useBlogStore()
   useEffect(() => {
     getAllBlog()
@@ -24,4 +24,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page;
