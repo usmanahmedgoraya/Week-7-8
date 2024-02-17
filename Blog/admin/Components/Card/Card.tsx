@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import './Card.css'
-import { TERipple } from 'tw-elements-react'
+const { TERipple } = require('tw-elements-react')
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import useBlogStore from '@/zustand/useBlogStore'

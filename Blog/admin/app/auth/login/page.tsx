@@ -1,11 +1,10 @@
 'use client'
 import Login from '@/Components/login/Login'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation' // Correct import statement for useRouter
 import React, { useEffect } from 'react'
 
-const page = () => {
+const page = () => { // Changed 'page' to 'Page'
   const router = useRouter()
-
   useEffect(() => {
     const localAuthToken:any = localStorage.getItem('Auth')
     if (localAuthToken) {
@@ -25,4 +24,4 @@ const page = () => {
   )
 }
 
-export default page
+export default page 

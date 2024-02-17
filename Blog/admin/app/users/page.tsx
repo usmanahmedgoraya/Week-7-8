@@ -1,15 +1,15 @@
 'use client'
-import BlogTable from '@/Components/BlogTable'
 import UserTable from '@/Components/UserTable'
 import useUserStore from '@/zustand/useUserStore'
-import React, { FC, useEffect } from 'react'
+import { FC, useEffect } from 'react'
 
-const page: FC =() => {
-  const {getAllUsers} = useUserStore()
+const Page: FC = () => {
+  const { getAllUsers } = useUserStore()
+
   useEffect(() => {
     getAllUsers()
-  }, [])
-  
+  }, []) // useEffect should be called inside the component and provide dependencies if necessary
+
   return (
     <div className='ml-20 mr-4'>
       <h1 className='md:text-4xl my-8 text-center font-bold '>Users</h1>
@@ -18,4 +18,4 @@ const page: FC =() => {
   )
 }
 
-export default page
+export default Page
