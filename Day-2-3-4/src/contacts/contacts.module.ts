@@ -3,7 +3,7 @@ import { ContactsController } from './contacts.controller';
 import { ContactsService } from './contacts.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ContactSchema } from './schemas/contact.schemas';
-import { AuthModule } from 'src/auth/auth.module';
+import { AuthModule } from '../auth/auth.module';
 
 @Module(
     {
