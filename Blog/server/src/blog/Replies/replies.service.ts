@@ -2,7 +2,7 @@ import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/
 import mongoose, { Model } from 'mongoose';
 import { Replies } from '../schema/Replies.schema';
 import { InjectModel } from '@nestjs/mongoose';
-import { Query } from 'express-serve-static-core';
+import { Express as Query } from 'express-serve-static-core';
 import { createRepliesDto } from './dto/create-replies.dto';
 import { updateRepliesDto } from './dto/update-replies.dto';
 import { Role, User } from '../../auth/schema/user.schemas';
