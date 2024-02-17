@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { User } from "src/auth/schema/user.schemas";
+import { User } from "../../auth/schema/user.schemas";
 
 export class UpdateContactDto {
     @ApiProperty()

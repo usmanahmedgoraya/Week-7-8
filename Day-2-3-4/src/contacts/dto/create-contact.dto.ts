@@ -1,4 +1,4 @@
-import { User } from "src/auth/schema/user.schemas";
+import { User } from "../../auth/schema/user.schemas";
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateContactDto {
