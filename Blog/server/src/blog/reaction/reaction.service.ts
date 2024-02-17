@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Query } from 'express-serve-static-core';
+import { Express as ExpressQuery } from 'express-serve-static-core';
 import { Model } from 'mongoose';
-import { User } from 'src/auth/schema/user.schemas';
+import { User } from '../../auth/schema/user.schemas';
 import { Blog } from '../schema/blog.schema';
 import { React, Reaction } from '../schema/reaction.schema';
 
@@ -13,7 +13,7 @@ export class ReactionService {
 
 
     // Find Reactions
-    async findAll(query: Query): Promise<Reaction[]> {
+    async findAll(query: ExpressQuery): Promise<Reaction[]> {
 
         const keyword = query.name ? {
             name: {

@@ -5,7 +5,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Query } from 'express-serve-static-core';
 import { createRepliesDto } from './dto/create-replies.dto';
 import { updateRepliesDto } from './dto/update-replies.dto';
-import { Role, User } from 'src/auth/schema/user.schemas';
+import { Role, User } from '../../auth/schema/user.schemas';
 import { Comment } from '../schema/comment.schema';
 
 @Injectable()

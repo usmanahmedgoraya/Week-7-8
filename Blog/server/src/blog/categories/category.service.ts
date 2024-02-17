@@ -1,6 +1,6 @@
 import { BadRequestException, ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Query } from 'express-serve-static-core';
+import { Express as Query } from 'express-serve-static-core';
 import mongoose, { Model } from 'mongoose';
 import { Categories } from '../schema/categories.schema';
 import { createCategoryDto } from './dto/create-category.dto';

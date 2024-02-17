@@ -1,4 +1,4 @@
-import { User } from "src/auth/schema/user.schemas";
+import { User } from "../../auth/schema/user.schemas";
 import { Status } from "../schema/blog.schema";
 import { Reaction } from "../schema/reaction.schema";
 import { IsArray, IsNotEmpty, IsString } from "class-validator";

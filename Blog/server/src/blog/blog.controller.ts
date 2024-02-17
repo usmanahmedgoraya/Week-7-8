@@ -1,15 +1,16 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query, Req, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { Query as ExpressQuery } from 'express-serve-static-core';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { Roles } from 'src/auth/roles.decorator';
-import { RolesGuard } from 'src/auth/roles.guard';
-import { Role } from 'src/auth/schema/user.schemas';
+import { Express as ExpressQuery } from 'express-serve-static-core';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { Roles } from '../auth/roles.decorator';
+import { RolesGuard } from '../auth/roles.guard';
+import { Role } from '../auth/schema/user.schemas';
 import { BlogService } from './blog.service';
 import { createBlogDto } from './dto/create-blog.dto';
 import { blogReactionDto } from './dto/reactionBlogDto.dto';
 import { updateBlogDto } from './dto/update-blog.dto';
 import { Reaction } from './schema/reaction.schema';
+
 
 @Controller('blog')
 export class BlogController {

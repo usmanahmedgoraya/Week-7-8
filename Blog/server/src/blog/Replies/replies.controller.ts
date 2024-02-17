@@ -1,10 +1,10 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query, Req, UseGuards } from '@nestjs/common';
 import { Replies } from '../schema/Replies.schema';
 import { RepliesService } from './replies.service';
-import { Query as ExpressQuery } from 'express-serve-static-core';
+import { Express } from 'express-serve-static-core';
 import { createRepliesDto } from './dto/create-replies.dto';
 import { updateRepliesDto } from './dto/update-replies.dto';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
 
 @Controller('replies')
 export class RepliesController {
@@ -14,7 +14,7 @@ export class RepliesController {
     // Get All Replies
     // =================
     @Get()
-    async findAllReplies(@Query() query: ExpressQuery): Promise<Replies[]> {
+    async findAllReplies(@Query() query: Express): Promise<Replies[]> {
         return await this.repliesService.findAll(query);
     }
 

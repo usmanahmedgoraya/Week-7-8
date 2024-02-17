@@ -1,8 +1,8 @@
 import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Query } from 'express-serve-static-core';
+import { Express as Query } from 'express-serve-static-core';
 import mongoose, { Model } from 'mongoose';
-import { Role, User } from 'src/auth/schema/user.schemas';
+import { Role, User } from '../../auth/schema/user.schemas';
 import { Blog } from '../schema/blog.schema';
 import { Comment } from '../schema/comment.schema';
 import { createCommentDto } from './dto/create-comment.dto';

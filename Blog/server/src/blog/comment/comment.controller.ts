@@ -1,13 +1,13 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query, Req, UseGuards } from '@nestjs/common';
-import { Query as ExpressQuery } from 'express-serve-static-core';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { Express as ExpressQuery } from 'express-serve-static-core';
+import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
 import { Comment } from '../schema/comment.schema';
 import { CommentService } from './comment.service';
 import { createCommentDto } from './dto/create-comment.dto';
 import { updateCommentDto } from './dto/update-comment.dto';
-import { RolesGuard } from 'src/auth/roles.guard';
-import { Roles } from 'src/auth/roles.decorator';
-import { Role } from 'src/auth/schema/user.schemas';
+import { RolesGuard } from '../../auth/roles.guard';
+import { Roles } from '../../auth/roles.decorator';
+import { Role } from '../../auth/schema/user.schemas';
 
 @Controller('comment')
 export class commentController {

@@ -1,5 +1,5 @@
 import { IsString } from "class-validator";
-import { User } from "src/auth/schema/user.schemas";
+import { User } from "../../auth/schema/user.schemas";
 import { Status } from "../schema/blog.schema";
 import { Comment } from "../schema/comment.schema";
 import { Reaction } from "../schema/reaction.schema";

@@ -1,9 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query, UseGuards } from '@nestjs/common';
-import { Query as ExpressQuery } from 'express-serve-static-core';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { Roles } from 'src/auth/roles.decorator';
-import { RolesGuard } from 'src/auth/roles.guard';
-import { Role } from 'src/auth/schema/user.schemas';
+import { Express as ExpressQuery } from 'express-serve-static-core';
+import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
+import { Roles } from '../../auth/roles.decorator';
+import { RolesGuard } from '../../auth/roles.guard';
+import { Role } from '../../auth/schema/user.schemas';
 import { Categories } from '../schema/categories.schema';
 import { CategoryService } from './category.service';
 import { createCategoryDto } from './dto/create-category.dto';

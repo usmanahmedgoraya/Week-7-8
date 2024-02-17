@@ -1,9 +1,9 @@
 import { Body, Controller, Get, Param, Post, Query, Req, UseGuards } from '@nestjs/common';
-import { Query as ExpressQuery } from 'express-serve-static-core';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { Roles } from 'src/auth/roles.decorator';
-import { RolesGuard } from 'src/auth/roles.guard';
-import { Role } from 'src/auth/schema/user.schemas';
+import { Express} from 'express-serve-static-core';
+import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
+import { Roles } from '../../auth/roles.decorator';
+import { RolesGuard } from '../../auth/roles.guard';
+import { Role } from '../../auth/schema/user.schemas';
 import { BlogService } from '../blog.service';
 import { blogReactionDto } from '../dto/reactionBlogDto.dto';
 import { Reaction } from '../schema/Reaction.schema';
@@ -15,7 +15,7 @@ export class ReactionController {
 
     // Find Reactions
     @Get()
-    async findAllReaction(@Query() query: ExpressQuery): Promise<Reaction[]> {
+    async findAllReaction(@Query() query: Express): Promise<Reaction[]> {
         return await this.Reactionservice.findAll(query);
     }
 

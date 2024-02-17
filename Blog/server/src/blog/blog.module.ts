@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { AuthModule } from 'src/auth/auth.module';
+import { AuthModule } from '../auth/auth.module';
 import { RepliesController } from './Replies/replies.controller';
 import { RepliesService } from './Replies/replies.service';
 import { BlogController } from './blog.controller';

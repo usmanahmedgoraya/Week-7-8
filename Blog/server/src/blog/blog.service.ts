@@ -2,8 +2,8 @@ import { BadRequestException, ConflictException, Injectable, NotFoundException, 
 import { InjectModel } from '@nestjs/mongoose';
 import { UploadApiErrorResponse, UploadApiResponse, v2 } from 'cloudinary';
 import mongoose, { Model } from 'mongoose';
-import { Query } from 'express-serve-static-core';
-import { User } from 'src/auth/schema/user.schemas';
+import { Express } from 'express-serve-static-core';
+import { User } from '../auth/schema/user.schemas';
 import { createBlogDto } from './dto/create-blog.dto';
 import { updateBlogDto } from './dto/update-blog.dto';
 import { Blog, Status } from './schema/blog.schema';
@@ -20,7 +20,7 @@ export class BlogService {
     ) { }
 
     // Find Id by query of category
-    async findAll(query: Query): Promise<Blog[]> {
+    async findAll(query: Express): Promise<Blog[]> {
         const categoryName: any = query.name;
         console.log(categoryName);
 
